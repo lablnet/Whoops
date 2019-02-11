@@ -38,7 +38,7 @@ echo "This is rest of code";
 
 ![image](image/error.png)
 
-## [x] TODO
+## TODO
 
 - [x] Bootstrap 4 ready.	 
 - [ ] Add new feature to show Enviroment details.

@@ -1,0 +1,18 @@
+{
+    "name": "lablnet/whoops",
+    "description": "PHP Error Handler package.",
+    "keywords": ["php", "error","error handler", "Whoops","free","package","Lablnet"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Malik Umer Farooq",
+            "email":"lablnet01@gmail.com",
+            "homepage": "https://softhub99.com"
+        }
+    ],  
+    "autoload": {
+        "psr-4": {
+             "Lablnet\\": "src/"
+        }
+    }
+}

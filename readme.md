@@ -1,4 +1,6 @@
-
+[![StyleCI](https://github.styleci.io/repos/170127689/shield?branch=master)](https://github.styleci.io/repos/170127689)
+[![Latest Stable Version](https://poser.pugx.org/lablnet/whoops/v/stable)](https://packagist.org/packages/lablnet/whoops)
+[![License](https://poser.pugx.org/lablnet/whoops/license)](https://packagist.org/packages/lablnet/whoops)
 
 # Whoops
 Whoops is a PHP library for handling exceptions and errors.

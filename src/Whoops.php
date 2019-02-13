@@ -28,6 +28,26 @@ class Whoops
     private $stack = [];
 
     /**
+     * A list of known editor strings.
+     *
+     * @since 3.0.0
+     *
+     * @var array
+     */
+    private $editors = [
+        "sublime"  => "subl://open?url=file://::file&line=::line",
+    ];
+
+    /**
+     * Current editor that to be use.
+     *
+     * @since 3.0.0
+     *
+     * @var string
+    */
+    public $setEditor = '';
+
+    /**
      * __construct.
      *
      * @since 3.0.0
@@ -56,6 +76,54 @@ class Whoops
             $e->getTraceAsString());
 
         return $this->render();
+    }
+
+    /**
+     * Get the editor uri.
+     *
+     * @param (string) $key editor name
+     *
+     * @since 3.0.0
+     *
+     * @return mixed
+     */
+    public function getEditor($key)
+    {
+        return (isset($this->editors[$key])) ? $this->editors[$key] : null;
+    }
+
+
+    /**
+     * Get the editor uri.
+     *
+     * @param (string) $key editor name
+     *
+     * @since 3.0.0
+     *
+     * @return mixed
+     */
+    public function setEditor($key)
+    {
+        $this->setEditor =  (isset($this->editors[$key])) ? $key : null;
+    }
+
+    /**
+     * Appen the editor.
+     *
+     * @param (string) $key editor name
+     * @param (string) $uri valid url string pattern
+     *
+     * @since 3.0.0
+     *
+     * @return void
+     */
+    public function appendEditor($key, $uri) :self
+    {
+        $arr = [$key => $uri];
+        $merge = array_merge($arr,$this->editors);
+        $this->editors = $merge;
+
+        return $this;
     }
 
     /**
@@ -94,6 +162,8 @@ class Whoops
             'code'        => ($code === 0) ? 404 : $code,
             'trace'       => $trace,
             'previewCode' => '',
+            'editor' => $this->setEditor,
+            'editorUri' => $this->getEditor($this->setEditor)
         ];
     }
 

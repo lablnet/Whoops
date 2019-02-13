@@ -53,7 +53,8 @@ $whoops->setEditor('sublime');
 //Rest of code....
 ```
 The following editors are currently supported by default.
-``sublime`` Sublime editor 
+
+- ``sublime`` Sublime editor 
 
 Append your own/custom editor
 ```php

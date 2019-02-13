@@ -34,6 +34,12 @@
             <div>
               <h5>Code:</h5>
               <p><span style='color:red'>File: </span><?php echo isset($stack['file']) ? $stack['file'] : '<span style="color:red">Sorry, message not found</span>' ?></p>
+              <p><?php
+                $uri = $stack['editorUri'];
+                $uri = str_replace("::file", $stack['file'], $uri);
+                $uri = str_replace("::line", $stack['line'], $uri);
+               echo (!empty($stack['editor'])) ?  "<a href='{$uri}'>Open file in ".$stack['editor']." editor</a>"  : ''; ?></p>
+
               <pre><code class=""><?php echo isset($stack['previewCode']) ? $stack['previewCode'] : '<span style="color:red">Sorry, code not loaded</span>' ?></code></pre>
             </div>
             <div>

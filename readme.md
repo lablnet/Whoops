@@ -1,4 +1,5 @@
 
+
 # Whoops
 Whoops is a PHP library for handling exceptions and errors.
 
@@ -12,7 +13,7 @@ Whoops is a PHP library for handling exceptions and errors.
 - Highlight the error line with red color.
 - Show preview code in browser.
 - Clean, well-structured & tested code-base.
--   Includes the ability to  [open referenced files directly in your editor and IDE]((#Open-Files-In-An-Editor))
+-   Includes the ability to  [open referenced files directly in your editor and IDE]((#open-files-in-an-editor))
 
 ## Insallation
 Installing this package is very simple, first ensure you have the right PHP version and composer installed then in your terminal/(command prompt) run: 

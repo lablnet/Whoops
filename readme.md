@@ -19,7 +19,10 @@ Installing this package is very simple, first ensure you have the right PHP vers
 ```composer require lablnet/whoops```
 
 Register the handler in your code
-```php $whoops = new Whoops();```
+```php
+<?php
+$whoops = new Whoops();
+```
 
 ## usage
 Example:

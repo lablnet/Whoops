@@ -35,7 +35,7 @@ class Whoops
      * @var array
      */
     private $editors = [
-        "sublime"  => "subl://open?url=file://::file&line=::line",
+        'sublime'  => 'subl://open?url=file://::file&line=::line',
     ];
 
     /**
@@ -44,7 +44,7 @@ class Whoops
      * @since 3.0.0
      *
      * @var string
-    */
+     */
     public $setEditor = '';
 
     /**
@@ -92,7 +92,6 @@ class Whoops
         return (isset($this->editors[$key])) ? $this->editors[$key] : null;
     }
 
-
     /**
      * Get the editor uri.
      *
@@ -104,7 +103,7 @@ class Whoops
      */
     public function setEditor($key)
     {
-        $this->setEditor =  (isset($this->editors[$key])) ? $key : null;
+        $this->setEditor = (isset($this->editors[$key])) ? $key : null;
     }
 
     /**
@@ -120,7 +119,7 @@ class Whoops
     public function appendEditor($key, $uri) :self
     {
         $arr = [$key => $uri];
-        $merge = array_merge($arr,$this->editors);
+        $merge = array_merge($arr, $this->editors);
         $this->editors = $merge;
 
         return $this;
@@ -162,8 +161,8 @@ class Whoops
             'code'        => ($code === 0) ? 404 : $code,
             'trace'       => $trace,
             'previewCode' => '',
-            'editor' => $this->setEditor,
-            'editorUri' => $this->getEditor($this->setEditor)
+            'editor'      => $this->setEditor,
+            'editorUri'   => $this->getEditor($this->setEditor),
         ];
     }
 

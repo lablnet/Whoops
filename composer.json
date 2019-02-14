@@ -1,7 +1,7 @@
 {
-    "name": "lablnet/whoops",
-    "description": "PHP Error Handler package.",
-    "keywords": ["php", "error","error handler", "Whoops","free","package","Lablnet"],
+    "name": "zest/whoops",
+    "description": "The Zest Error Handler package.",
+    "keywords": ["php", "Zest", "error","error handler", "Whoops","free","package","Lablnet"],
     "license": "MIT",
     "authors": [
         {
@@ -12,7 +12,7 @@
     ],  
     "autoload": {
         "psr-4": {
-             "Lablnet\\": "src/"
+             "Zest\\Whoops\\": ""
         }
     }
 }

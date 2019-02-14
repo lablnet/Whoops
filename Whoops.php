@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Whoops is a PHP library for handling exceptions and errors.
+ * This file is a part of Zest Framework.
  *
  * @author   Malik Umer Farooq <lablnet01@gmail.com>
  * @author-profile https://www.facebook.com/malikumerfarooq01/
@@ -12,7 +12,7 @@
  * @license MIT
  */
 
-namespace Lablnet;
+namespace Zest\Whoops;
 
 class Whoops
 {
